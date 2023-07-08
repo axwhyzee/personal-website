@@ -117,4 +117,4 @@ def forward_request(
 
 
 if __name__ == '__main__':
-    uvicorn.run('app:app', port=10000)
+    uvicorn.run('app:app', host='0.0.0.0', port=PORT)
