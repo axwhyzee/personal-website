@@ -19,6 +19,8 @@ function Sidebar() {
             </section>
             <section className='bg-dark sidebar-section'>
                 <Resume />
+            </section>
+            <section className='bg-light sidebar-section'>
                 <Leetcode />
             </section>
         </div>
