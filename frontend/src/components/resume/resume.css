@@ -1,0 +1,44 @@
+.chat {
+    color: #b0b0b0;
+    font-size: 12px;
+    padding: 20px;
+}
+
+.file-upload-wrapper {
+    color: #b0b0b0;
+    text-align: center;
+    display: inline-block;
+    border: 1.5px dashed #00bd95;
+    border-radius: 18px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.file-upload-label:hover {
+    cursor: pointer;
+}
+
+.cloud-icon {
+    color: #00bd95;    
+}
+
+#file-upload {
+    display: none;
+}
+
+.text-light {
+    color: #b0b0b0;
+    font-size: 10px
+}
+
+.text-white {
+    color: #f0f0f0;
+}
+
+.space-below {
+    margin-bottom: 20px;
+}
+
+.align-center {
+    text-align: center;
+}
