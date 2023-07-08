@@ -1,0 +1,85 @@
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+    font-size: 8px;
+    background-color: rgb(74, 74, 74);
+    color: #fff;
+    padding: 2px 4px;
+    border-radius: 2px;
+}
+
+label {
+    color: #00bd95;
+    font-size: 10px;
+    font-weight: bold;
+    line-height: 25px;
+}
+
+.padding-hor {
+    padding: 40px 60px;
+}
+
+.github-input-wrapper {
+    display: flex;
+    flex-direction: 'row';
+    flex: 1;
+    border: 1px solid #00bd95;
+    justify-content: space-between;
+}
+
+.github-input {
+    color: #b0b0b0;
+    text-align: center;
+    flex-grow: 1;
+    background: transparent;
+    outline: none;
+    border: none;
+}
+
+.btn-github {
+    background-color: #00bd95;
+    font-size: 8px;
+    font-weight: bold;
+    outline: none;
+    border: none;
+    padding: 8px 15px;
+    transition: .5s;
+}
+
+.btn-github:hover {
+    cursor: pointer;
+    background: transparent;
+    color: #00bd95;
+}
+
+
+.token-input-wrapper {
+    width: 100%;
+}
+
+.token-input {
+    width: 100%;
+    background: transparent;
+    color: #b0b0b0;
+    text-align: center;
+    flex-grow: 1;
+    background: transparent;
+    outline: none;
+    padding: 5px;
+    border: 0;
+    border: 1px solid #00bd95;
+}
+
+.token-help {
+    color: #b0b0b0;
+    font-size: 9px;
+    line-height: 15px;
+    padding: 10px 0;
+}
+
+.token-help a {
+    color: #04d9ff;
+}
+
+.space-below {
+    margin-bottom: 20px;
+}

@@ -1,0 +1,28 @@
+.Sidebar {
+    height: 100vh;
+    background-color: #171C22;
+    flex-grow: 1;
+    box-shadow: 0 0 40px #000;
+}
+
+.sidebar-section {
+    padding: 40px 20px;
+}
+
+.social-icon-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.social-icon {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    background-color: #00bd95;
+    color: #1e3050;
+    border-radius: 100%;
+    border: 1px solid #00bd95;
+}
+
