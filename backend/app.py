@@ -113,6 +113,7 @@ def forward_request(
         headers=headers,
         json=vars(payload)
     )
+    print(r.text)
     return JSONResponse(content=r.json(), status_code=status.HTTP_200_OK)
 
 
