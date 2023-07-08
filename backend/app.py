@@ -4,23 +4,38 @@ from bardapi import Bard
 from fastapi import FastAPI, File, UploadFile, status
 from fastapi.responses import FileResponse, Response, JSONResponse
 from fastapi.middleware.cors import CORSMiddleware
+import requests
+from typing import Literal
 import uvicorn
 
-from settings import PORT, UPLOAD_FILEPATH, APPEND_PROMPT
+from settings import (
+    APPEND_PROMPT, 
+    GITHUB_API_KEY,
+    GITHUB_GRAPHQL_URL, 
+    LEETCODE_GRAPHQL_URL,
+    PORT,
+    UPLOAD_FILEPATH
+)
 from utils.pdf_reader import pdf_to_text
 from utils.filepaths import clean_filepath, to_uuid_filename
+from models.payload import GraphQLPayload
+
 
 app = FastAPI()
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=['*'],
+    allow_origins=['*', 'http://localhost:3000'],
     allow_credentials=True,
     allow_methods=['*'],
     allow_headers=['*'],
 )
 
 bard = Bard()
+
+@app.get('/')
+def root() -> str:
+    return 'ping'
 
 @app.get('/file')
 def get_file(
@@ -53,6 +68,7 @@ def bard_inference_on_file(
         status_code=status.HTTP_200_OK
     )
     
+
 @app.post('/file/upload')
 def upload_resume(
     file: UploadFile = File(...)
@@ -76,5 +92,29 @@ def upload_resume(
     finally:
         file.file.close()
 
+
+@app.post('/proxy/graphql/{dest}')
+def forward_request(
+    payload: GraphQLPayload,
+    dest: Literal['github', 'leetcode']
+) -> JSONResponse:
+    headers = {'Content-Type': 'application/json'}
+    if dest=='github':
+        headers['Authorization'] = 'Bearer ' + GITHUB_API_KEY
+        url=GITHUB_GRAPHQL_URL
+    elif dest=='leetcode':
+        url=LEETCODE_GRAPHQL_URL
+        headers['Authorization'] = 'Bearer ' + GITHUB_API_KEY
+    else:
+        return JSONResponse(content={'error': 'Invalid destination'}, status_code=status.HTTP_400_BAD_REQUEST)
+    
+    r = requests.post(
+        url=url,
+        headers=headers,
+        json=vars(payload)
+    )
+    return JSONResponse(content=r.json(), status_code=status.HTTP_200_OK)
+
+
 if __name__ == '__main__':
-    uvicorn.run('app:app', port=PORT, reload=True)
+    uvicorn.run('app:app', port=10000)
