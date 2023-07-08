@@ -8,7 +8,7 @@ export const CONTENT_TYPE_HEADERS = {
     'Content-Type': 'application/json'
 }
 
-export const SERVER_URL = 'https://2276-103-252-200-208.ngrok-free.app';
+export const SERVER_URL = 'https://axwhyzee-website-server.onrender.com';
 
 export const RESUME_FILEPATH = `${SERVER_URL}/file?filepath=00000000-0000-0000-0000-000000000000.pdf`;
 
