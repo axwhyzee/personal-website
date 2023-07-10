@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "./static/css/main.422b054f.css",
-    "main.js": "./static/js/main.b01977e5.js",
+    "main.css": "./static/css/main.776ab2a9.css",
+    "main.js": "./static/js/main.f28c9586.js",
     "static/media/background-3.jpg": "./static/media/background-3.89289b41b881b3fe7dde.jpg",
     "static/media/leetcode_logo_right.png": "./static/media/leetcode_logo_right.d3fb069aeca2a83b2189.png",
     "static/media/leetcode_logo_left.png": "./static/media/leetcode_logo_left.eab755b94b12aadb200a.png",
     "index.html": "./index.html",
-    "main.422b054f.css.map": "./static/css/main.422b054f.css.map",
-    "main.b01977e5.js.map": "./static/js/main.b01977e5.js.map"
+    "main.776ab2a9.css.map": "./static/css/main.776ab2a9.css.map",
+    "main.f28c9586.js.map": "./static/js/main.f28c9586.js.map"
   },
   "entrypoints": [
-    "static/css/main.422b054f.css",
-    "static/js/main.b01977e5.js"
+    "static/css/main.776ab2a9.css",
+    "static/js/main.f28c9586.js"
   ]
 }
