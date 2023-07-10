@@ -1,6 +1,7 @@
 .Sidebar {
     background-color: #171C22;
     flex-grow: 1;
+    align-self: flex-start;
     box-shadow: 0 0 40px #000;
 }
 
