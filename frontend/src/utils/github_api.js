@@ -1,5 +1,5 @@
 import { SERVER_URL, CONTENT_TYPE_HEADERS } from '../consts/consts';
-import { QUERY_REPOS } from '../consts/graphql/github';
+import { QUERY_REPOS } from '../consts/graphql_queries';
 
 function _compare_updated(a, b) {
     return a.updatedAt < b.updatedAt ? 1 : -1;
