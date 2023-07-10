@@ -3,6 +3,7 @@ import { upload_file, get_inference, get_server_file_path } from '../../utils/se
 import Spinner from '../spinner/Spinner.jsx'; 
 import { RESUME_FILEPATH, RESUME_FILENAME } from '../../consts/consts';
 
+import experiences from '../../consts/experiences';
 import './resume.css';
 
 function Resume() {
@@ -32,11 +33,24 @@ function Resume() {
         chatRef.current.innerText = await get_inference(filepath)
         setLoading('');
     }
-    
+        
     return (
         <>
             <h2 className='text-white'>Resume</h2>
-            <p className='text-light space-below'>Upload your resume to get a summary by Google Bard</p>
+            {experiences.map((exp) => (
+                <div>
+                    <h4 className='exp-title'>{exp.title}</h4><br/>
+                    <span className='exp-company'>{exp.company}</span>
+                    <span className='exp-time'>{exp.time}</span>
+                    <ul className='exp-desc bg-dark'>
+                        {exp.description.map((bullet) => (
+                            <li>{bullet}</li>
+                        ))}
+                    </ul>
+                </div>
+            ))}
+            <div className='spacer'/>
+            <p className='text-light space-below'>Upload your resume to get a summary by Google Bard, or download my resume and upload it to test!</p>
             <div className='align-center'>
                 <div className='file-upload-wrapper space-below'>
                     <label htmlFor="file-upload" className='file-upload-label'>
@@ -60,8 +74,7 @@ function Resume() {
                     <div ref={chatRef}></div>
                 </div>
                 </>
-            )}
-            
+            )} 
         </>
     )
 }
