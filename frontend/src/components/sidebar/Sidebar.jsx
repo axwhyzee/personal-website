@@ -7,10 +7,10 @@ function Sidebar() {
     return (
         <div className="Sidebar">
             <section className='bg-dark sidebar-section'>
-                <Resume />
+                <Leetcode />
             </section>
             <section className='bg-light sidebar-section'>
-                <Leetcode />
+                <Resume />
             </section>
             <section className='bg-dark social-icon-wrapper sidebar-section'>            
                 <a className='social-icon' href='mailto:siah_weehung@yahoo.com' title='siah_weehung@yahoo.com' rel="noreferrer">
