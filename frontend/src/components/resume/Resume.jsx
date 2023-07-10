@@ -14,9 +14,17 @@ function Resume() {
         const formData = new FormData();
         const fileObj = e.target.files[0];
 
+        if (!fileObj) return
+
         setLoading('Uploading file ...');
         e.preventDefault();
         
+        // 2 MB
+        if (fileObj.size > 2097152) {
+            alert('File is too big.'); 
+            setLoading('');
+            return;
+        }
         formData.append('file', fileObj);
         const filepath = await upload_file(formData);
         setResume({'name': fileObj.name, 'url':get_server_file_path(filepath)})
@@ -28,12 +36,13 @@ function Resume() {
     return (
         <>
             <h2 className='text-white'>Resume</h2>
-            <p className='text-light space-below'>Upload your resume and see what Google Bard says</p>
+            <p className='text-light space-below'>Upload your resume to get a summary by Google Bard</p>
             <div className='align-center'>
                 <div className='file-upload-wrapper space-below'>
                     <label htmlFor="file-upload" className='file-upload-label'>
                         <i className="fa-solid fa-cloud-arrow-up cloud-icon fa-2xl" /><br />
-                        Click to Upload Resume (Single page)<br />
+                        Click to Upload Resume<br />
+                        <span className='sub-text'>(Single page, max 2 MB)</span><br />
                         <code>.docx</code> <code>.pdf</code> <code>.txt</code>
                     </label>
                     <br />
