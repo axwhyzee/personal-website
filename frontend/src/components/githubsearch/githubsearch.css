@@ -18,40 +18,6 @@ label {
     padding: 40px 60px;
 }
 
-.github-input-wrapper {
-    display: flex;
-    flex-direction: 'row';
-    flex: 1;
-    border: 1px solid #00bd95;
-    justify-content: space-between;
-}
-
-.github-input {
-    color: #b0b0b0;
-    text-align: center;
-    flex-grow: 1;
-    background: transparent;
-    outline: none;
-    border: none;
-}
-
-.btn-github {
-    background-color: #00bd95;
-    font-size: 8px;
-    font-weight: bold;
-    outline: none;
-    border: none;
-    padding: 8px 15px;
-    transition: .5s;
-}
-
-.btn-github:hover {
-    cursor: pointer;
-    background: transparent;
-    color: #00bd95;
-}
-
-
 .token-input-wrapper {
     width: 100%;
 }
