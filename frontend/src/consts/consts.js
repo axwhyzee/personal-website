@@ -10,7 +10,7 @@ export const CONTENT_TYPE_HEADERS = {
 
 export const SERVER_URL = 'https://axwhyzee-website-server.onrender.com';
 
-export const RESUME_FILEPATH = `${SERVER_URL}/file?filepath=00000000-0000-0000-0000-000000000000.pdf`;
+export const RESUME_FILEPATH = 'https://drive.google.com/file/d/1Ex2FNyFHAL5qAzfjp1cgYChnn0XQ8Gjj/view?usp=sharing';
 
 export const RESUME_FILENAME = 'resume_siah_wee_hung.pdf';
 
