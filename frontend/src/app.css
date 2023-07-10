@@ -65,3 +65,7 @@ body {
 .title {
     border-bottom: 1px solid #f3f3f368;
 }
+
+.error {
+    color: rgb(179, 71, 67);
+}
