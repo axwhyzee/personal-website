@@ -6,13 +6,13 @@ import './sidebar.css';
 function Sidebar() {
     return (
         <div className="Sidebar">
-            <section className='bg-dark sidebar-section'>
+            <section className='bg-light sidebar-section'>
                 <Leetcode />
             </section>
-            <section className='bg-light sidebar-section'>
+            <section className='bg-dark sidebar-section'>
                 <Resume />
             </section>
-            <section className='bg-dark social-icon-wrapper sidebar-section'>            
+            <section className='bg-light social-icon-wrapper sidebar-section'>            
                 <a className='social-icon' href='mailto:siah_weehung@yahoo.com' title='siah_weehung@yahoo.com' rel="noreferrer">
                     <i className="fa-solid fa-envelope" />
                 </a>

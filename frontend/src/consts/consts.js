@@ -8,6 +8,8 @@ export const CONTENT_TYPE_HEADERS = {
     'Content-Type': 'application/json'
 }
 
+export const ITEMS_PER_PAGE = 4;
+
 export const SERVER_URL = 'https://axwhyzee-website-server.onrender.com';
 
 export const RESUME_FILEPATH = 'https://drive.google.com/file/d/1Ex2FNyFHAL5qAzfjp1cgYChnn0XQ8Gjj/view?usp=sharing';

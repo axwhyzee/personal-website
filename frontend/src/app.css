@@ -10,18 +10,14 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
-.spacer {
-    display: block;
-    height: 30px;
-}
-
 .App {
+    width: 100%;
     background-color: #fff;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     gap: 30px;
-    justify-content: space-between;
-    padding-left: 30px;
+    justify-content: space-around;
     background-image: url('assets/background-3.jpg');
     background-repeat: repeat;
     -webkit-background-size: 600px;
@@ -38,34 +34,36 @@ body {
     background-color: #171C22;
 }
 
-.main-view {
-    width: 50%;
-    margin-top: 50px;
-    flex-shrink: 0;
-}
+@media only screen and (max-width: 980px) {
+    .App {
+        gap: 0;
+    }
+    
+    .App > * {
+        width: 100%;
+    }
 
-.box-shadow {
-    box-shadow: 0 0 40px #000;  
-}
+    .main-view {
+        margin: 0;
+    }
 
-.cards {
-    display: flex;
-    padding: 30px;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 20px;
-}
+    .spacer {
+        display: none;  
+    }
 
-.header {
-    width: 100%;
-    color: #f3f3f3;
-    margin: 0;
-}
+    .header.title {
+        font-size: 22px;
+    }
 
-.title {
-    border-bottom: 1px solid #f3f3f368;
-}
+    .header {
+        font-size: 16px;
+    }
 
-.error {
-    color: rgb(179, 71, 67);
+    .padding-hor {
+        padding: 30px;
+    }
+
+    .cards {
+        padding: 15px;
+    }
 }
