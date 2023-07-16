@@ -14,6 +14,7 @@ from settings import (
     GITHUB_GRAPHQL_URL, 
     LEETCODE_GRAPHQL_URL,
     PORT,
+    SECURE_1PSID_TOKEN,
     UPLOAD_FILEPATH
 )
 from utils.auth import auth_request
@@ -32,7 +33,7 @@ app.add_middleware(
     allow_headers=['*'],
 )
 
-bard = Bard()
+bard = Bard(token=SECURE_1PSID_TOKEN)
 
 @app.get('/')
 def root() -> str:
