@@ -1,6 +1,4 @@
 import os
-from dotenv import find_dotenv, load_dotenv
-load_dotenv(find_dotenv())
 
 SECURE_1PSID_TOKEN = os.environ.get('SECURE_1PSID_TOKEN')
 
