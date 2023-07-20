@@ -42,7 +42,7 @@ function Resume() {
                     <h4 className='exp-title'>{exp.title}</h4><br/>
                     <span className='exp-company'>{exp.company}</span>
                     <span className='exp-time'>{exp.time}</span>
-                    <ul className='exp-desc bg-dark'>
+                    <ul className='exp-desc bg-pre'>
                         {exp.description.map((bullet) => (
                             <li>{bullet}</li>
                         ))}

@@ -16,8 +16,6 @@ body {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 30px;
-    justify-content: space-around;
     background-image: url('assets/background-3.jpg');
     background-repeat: repeat;
     -webkit-background-size: 600px;
@@ -34,16 +32,13 @@ body {
     background-color: #171C22;
 }
 
-@media only screen and (max-width: 980px) {
-    .App {
-        gap: 0;
-    }
-    
+@media only screen and (max-width: 980px) {    
     .App > * {
         width: 100%;
     }
 
     .main-view {
+        padding-right: 0;
         margin: 0;
     }
 
@@ -65,5 +60,20 @@ body {
 
     .cards {
         padding: 15px;
+    }
+    .bg-light, .bg-dark {
+        padding: 30px 120px;
+    }
+}
+
+@media only screen and (max-width: 760px) { 
+    .bg-light, .bg-dark {
+        padding: 30px 50px;
+    }
+}
+
+@media only screen and (max-width: 480px) { 
+    .bg-light, .bg-dark {
+        padding: 20px;
     }
 }

@@ -4,10 +4,11 @@
 }
 
 .main-view {
-    width: 50%;
+    width: 60%;
     margin-top: 50px;
     flex-shrink: 0;
     flex-grow: 1;
+    padding-right: 30px;
 }
 
 .box-shadow {

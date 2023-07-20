@@ -4,10 +4,10 @@ const experiences = [
         company: 'Ion Mobility',
         time: 'May 2023',
         description: [
-            'Custom Xendit payment gateway plugin w/ Saleor ecommerce backend (Django)',
-            'Proxy server, CI/CD automated testing w/ mocks',
-            'Implement & deploy project management tool based on org’s GitHub ProjectV2 data',
-            'Ad hoc React projects for product demos'
+            'Created proj mgmt tool to capture & visualize GitHub ProjectV2 data w/ Redash.io',
+            'Built proxy server/API wrapper for EV charger system, w/ extensive error prevention mechanisms & custom functionalities',
+            'Xendit payment gateway plugin, integrated w/ E-comm platform Saleor',
+            'Ad-hoc tasks like react web apps for demos'
         ]
     },
     {
