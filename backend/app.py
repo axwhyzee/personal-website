@@ -33,11 +33,15 @@ app.add_middleware(
     allow_headers=['*'],
 )
 
-bard = Bard(token=SECURE_1PSID_TOKEN)
+try:
+    bard = Bard(token=SECURE_1PSID_TOKEN)
+except:
+    bard = None
 
 @app.get('/')
 def root() -> str:
     return 'ping'
+
 
 @app.get('/file')
 def get_file(
@@ -56,6 +60,10 @@ def get_file(
 def bard_inference_on_file(
     filepath: str
 ) -> JSONResponse:
+    if not bard:
+        return JSONResponse(
+            content='API Key has expired, unable to use Google Bard right now'
+        )
     filepath = os.path.join(UPLOAD_FILEPATH, filepath)
     f = read_pdf if filepath.endswith('.pdf') else \
         read_text if filepath.endswith('.txt') else \
@@ -66,7 +74,10 @@ def bard_inference_on_file(
             status_code=status.HTTP_200_OK
         )
     else:
-        return JSONResponse(content='No content found in file.', status_code=status.HTTP_200_OK)
+        return JSONResponse(
+            content='No content found in file.', 
+            status_code=status.HTTP_200_OK
+        )
     
 
 @app.post('/file/upload')
